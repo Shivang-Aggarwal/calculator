@@ -10,12 +10,13 @@ const colorMap: Record<Color, string> = {
 
 type ButtonProps = {
     text: string,
-    color: Color
+    color: Color,
+    changeResult: Function
 }
 
-function Button({text, color}: ButtonProps) {
+function Button({text, color, changeResult}: ButtonProps) {
     return (
-        <button className={clsx(
+        <button onClick={() => changeResult(text)} className={clsx(
             'text-white',
             colorMap[color]
         )}>
