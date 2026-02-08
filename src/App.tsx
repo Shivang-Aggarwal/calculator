@@ -83,6 +83,14 @@ function App() {
       if (containsOperator(expression) && size % 2 === 1 && size > 1) {
         setExpression([evaluate()])
       }
+    } else if(text === '+/-') {
+      let last: string = expression[expression.length - 1]
+
+      if (isValidNumber(last)) {
+        let x: number = -1 * Number(last)
+
+        setExpression([...expression.slice(0, expression.length - 1), x.toString()])
+      }
     } else {
       let len: number = expression.length
 
