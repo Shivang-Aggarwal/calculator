@@ -7,7 +7,9 @@
 
 A simple calculator using React
 
-![calculator-ss](screenshots/calculator.png)
+<p align="center">
+  <img src="screenshots/calculator.png" alt="calculator-ss" width="400">
+</p>
 
 ### ✍️ Authors
 
