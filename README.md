@@ -7,6 +7,8 @@
 
 A simple calculator using React
 
+![calculator-ss](screenshots/calculator.png)
+
 ### ✍️ Authors
 
 [Shivang Aggarwal](https://github.com/Shivang-Aggarwal)
