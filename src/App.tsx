@@ -66,7 +66,7 @@ function App() {
     }
 
     if (x !== null) {
-      return x.toString()
+      return x.toFixed(4).toString()
     } else {
       return Number.MIN_SAFE_INTEGER.toString()
     }
@@ -90,6 +90,12 @@ function App() {
         let x: number = -1 * Number(last)
 
         setExpression([...expression.slice(0, expression.length - 1), x.toString()])
+      }
+    } else if(text === '.') {
+      let last: string = expression[expression.length - 1]
+
+      if (isValidNumber(last) && last.charAt(last.length - 1) !== '.') {
+        setExpression([...expression.slice(0, expression.length - 1), last + '.'])
       }
     } else {
       let len: number = expression.length
